@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Landing Page</title>
+    <style>
+        /* Resetting default margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styles for the body and the background image */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: url('https://cdn.npfs.co/uploads/template/207/396/publish/images/image_03.jpg') no-repeat center center fixed;
+            background-size: cover;
+            /* Ensures the image covers the entire background */
+            background-attachment: fixed;
+            /* Keeps the background image fixed during scrolling */
+            background-position: center;
+            /* Centers the background image */
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 93px;
+            height: 40px;
+            padding: 14px 10px;
+            border-radius: 100px;
+            border: 0.78px solid rgb(255, 118, 36);
+            background-color: rgb(254, 244, 234);
+            color: var(--text-color-pumpkin);
+            font-size: var(--size20);
+            font-weight: var(--fw400);
+            line-height: var(--lh23);
+            text-align: center;
+            outline: none;
+            cursor: pointer;
+            /* transition: background-color 0.3s, border 0.3s; */
+        }
+
+        nav ul li a:hover {
+            background-color: rgb(255, 235, 216);
+            border: 1px solid rgb(255, 118, 36);
+        }
+
+        section {
+            padding: 60px 20px;
+            /* background: rgba(0, 0, 0, 0.7); */
+            margin: 20px 0;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        #hero {
+            margin-top: 62px;
+            text-align: center;
+            color: #fff;
+            /* background: rgba(0, 0, 0, 0.5); */
+            padding: 100px 20px;
+            margin-bottom: 20px;
+            background-size: cover;
+            /* Adjusts the size of the background image */
+            background-position: center;
+            /* Centers the background image */
+        }
+
+        #hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        #hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+
+        .course-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 100px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .course-item {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .course-item:hover {
+            background-color: #0056b3;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form label {
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        form input {
+            width: 300px;
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        form select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .course-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background: rgba(0, 0, 0, 0.5);">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#apply">Apply</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="hero">
+            <img src="https://static.npfs.co/accounts/207/documents/2024/7/5/AULogo.png?1720163204"
+                style="width: 500px;background-color: #ffffff;" />
+            <h1>Empowering your future with quality education.</h1>
+            <a href="#apply" class="cta-button">Apply Now</a>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Alliance University, located in the vibrant city of Bangalore, India, is a premier institution dedicated
+                to providing world-class education and fostering innovation. Established in 2010, our university offers
+                a diverse range of undergraduate, postgraduate, and doctoral programs across various disciplines
+                including Engineering, Business, Law, and Social Sciences. We are committed to academic excellence,
+                research, and holistic development, ensuring our students are well-prepared to tackle global challenges
+                and excel in their chosen fields. At Alliance University, we blend rigorous academics with practical
+                experience, nurturing future leaders and professionals with a global perspective.</p>
+        </section>
+
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <div class="course-list">
+                <div class="course-item">Computer Science and Engineering </div>
+                <div class="course-item">Business Administration</div>
+                <div class="course-item">MBA</div>
+                <div class="course-item">BBA</div>
+            </div>
+        </section>
+
+        <section id="apply">
+            <h2>Apply Now</h2>
+            <form id="apply-form">
+                <div style="display: flex;align-items: center;justify-content: center;gap: 100px;">
+                    <div style="display: flex;flex-direction: column;">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Please enter your Name" required>
+                    </div>
+                    <div  style="display: flex;flex-direction: column;">
+                        <label for="name">Gmail:</label>
+                        <input type="gmail" id="gmail" name="gmail" placeholder="Please enter your Gmail" required>
+                    </div>
+                    <div  style="display: flex;flex-direction: column;">
+                        <label for="name">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Please enter your Phone Number" required>
+                    </div>
+                </div>
+
+                <div style="display: flex;align-items: center;justify-content: center;gap: 100px">
+                    <div style="display: flex;flex-direction: column;">
+                        <label for="name">DateOfBirth:</label>
+                        <input type="text" id="name" name="name" placeholder="Please enter your DateOfBirth" required>
+                    </div>
+                    <div  style="display: flex;flex-direction: column;">
+                        <label for="name">10th Marks</label>
+                        <input type="gmail" id="gmail" name="gmail" placeholder="Please enter your 10th Marks" required>
+                    </div>
+                    <div  style="display: flex;flex-direction: column;">
+                        <label for="name">12th Grade:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Please enter your 12th Grade" required>
+                    </div>
+                </div>
+
+<div style="display: flex;flex-direction: column;margin-left: 144px;">
+                <label for="course">Select Course:</label>
+                <select id="course" name="course" required style="width: 300px;height: 50px;">
+                    <option value="computer-science and Engineering">Computer Science and Engineering </option>
+                    <option value="business-administration">Business Administration</option>
+                    <option value="MBA">MBA</option>
+                    <option value="BBA">BBA</option>
+                </select>
+            </div>
+
+            <div style="display: flex;align-items: center;justify-content: center;margin-top: 20px;">
+                <button type="submit" style="width: 200px;">Submit</button>
+            </div>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:contact@university.edu">contactinfo@alliance.edu.in</a></p>
+            <p>Phone: <a href="tel:+918046199166 ">+91 80-4619 9166 </a></p>
+            <p>Central Campus :
+                <span>Chikkahagade Cross,
+                Chandapura - Anekal Main Road,
+                Anekal, Bengaluru – 562 106, Karnataka, India.
+                
+                Get Route Map
+                
+                Phone : +91 80 4619 9000 / 9100 / +91 80 4129 9200
+                
+                Fax : +91 80 4619 9099
+                
+                E-mail : enquiry@alliance.edu.in</span> </p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 University. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
